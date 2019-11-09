@@ -40,7 +40,7 @@
 				<acme:menu-suboption code="master.menu.anonymous.guerrero-list" action="/anonymous/guerrero-bulletin/list"/>
 				<acme:menu-suboption code="master.menu.anonymous.garcia-create" action="/anonymous/garcia-bulletin/create"/>
 				<acme:menu-suboption code="master.menu.anonymous.garcia-list" action="/anonymous/garcia-bulletin/list"/>
-        <acme:menu-suboption code="master.menu.anonymous.hu-create" action="/anonymous/hu-bulletin/create"/>
+      	   <acme:menu-suboption code="master.menu.anonymous.hu-create" action="/anonymous/hu-bulletin/create"/>
 				<acme:menu-suboption code="master.menu.anonymous.hu-list" action="/anonymous/hu-bulletin/list"/>
 				<acme:menu-suboption code="master.menu.anonymous.soto-create" action="/anonymous/soto-bulletin/create"/>
 				<acme:menu-suboption code="master.menu.anonymous.soto-list" action="/anonymous/soto-bulletin/list"/>
@@ -73,7 +73,7 @@
 		</acme:menu-option>
 
 		<acme:menu-option code="master.menu.provider" access="hasRole('Provider')">
-			<acme:menu-suboption code="master.menu.provider.favourite-link" action="http://www.example.com/"/>
+			<acme:menu-suboption code="master.menu.provider.request2" action="/provider/request2/form"/>
 		</acme:menu-option>
 
 		<acme:menu-option code="master.menu.consumer" access="hasRole('Consumer')">
