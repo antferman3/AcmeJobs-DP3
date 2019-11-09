@@ -1,0 +1,131 @@
+# i18n_en.messages
+#
+# Copyright (c) 2019 Rafael Corchuelo.
+#
+# In keeping with the traditional purpose of furthering education and research, it is
+# the policy of the copyright owner to permit non-commercial use and redistribution of
+# this software. It has been tested carefully, but it is not guaranteed for any particular
+# purposes.  The copyright owner does not offer any warranties or representations, nor do
+# they accept any liabilities with respect to them.
+
+# master.banner.welcome #######################################################
+
+master.banner.background = #404040
+
+# master.welcome ##############################################################
+
+master.welcome.title = Welcome!
+master.welcome.text = \
+	Welcome to Acme Jobs! Never before has it been easier to find a \
+	job! \
+	
+
+# master.menu #################################################################
+
+master.menu.home = Home
+master.menu.sign-up = Sign up
+master.menu.sign-in = Sign in
+master.menu.sign-out = Sign out
+
+# master.menu.anonymous #######################################################
+
+master.menu.anonymous = Anonymous
+master.menu.anonymous.abraham-favourite-link = Abraham Favourite link 
+master.menu.anonymous.antonio-favourite-link =Antonio Favourite link
+master.menu.anonymous.chao-favourite-link = Chao Favourite link
+master.menu.anonymous.martin-favourite-link =Martin Favourite link
+master.menu.anonymous.david-favourite-link =David Favourite link
+master.menu.anonymous.jose-favourite-link =Jose Favourite link
+master.menu.anonymous.list-shouts = List shouts
+master.menu.anonymous.shout = Shout!
+master.menu.anonymous.bulletin-list = List Bulletins
+master.menu.anonymous.bulletin-create = Create Bulletins
+master.menu.anonymous.bulletins = Bulletins
+master.menu.anonymous.fernandez-create = Create FernandezBulletin
+master.menu.anonymous.fernandez-list = List FernandezBulletin
+master.menu.anonymous.guerrero-create = Create GuerreroBulletin
+master.menu.anonymous.guerrero-list = List GuerreroBulletin
+master.menu.anonymous.garcia-create = Create GarciaBulletin
+master.menu.anonymous.garcia-list = List GarciaBulletin
+master.menu.anonymous.delgado-list = List DelgadoBoletín
+master.menu.anonymous.delgado-create = Create DelgadoBoletín
+master.menu.anonymous.hu-create = Create HuBulletin
+master.menu.anonymous.hu-list = List HuBulletin
+master.menu.anonymous.soto-create = Create SotoBulletin
+master.menu.anonymous.soto-list = List SotoBulletin
+master.menu.anonymous.announcement-list= List announcements
+master.menu.anonymous.investorRecords-list= List investor records
+master.menu.anonymous.records-list= List company records
+
+# master.menu.authenticated ###################################################
+master.menu.authenticated= Authenticated
+master.menu.authenticated.announcement-list= List announcements
+master.menu.authenticated.request2-list= List requests
+master.menu.authenticated.offer-list= List offers
+master.menu.authenticated.investorRecords-list= List investor records
+master.menu.authenticated.challenge-list= List challenges
+master.menu.authenticated.records-list= List company records
+
+# master.menu.administrator ###################################################
+
+master.menu.administrator = Administrator
+master.menu.administrator.user-accounts = User accounts
+master.menu.administrator.shutdown = Shut down
+master.menu.administrator.announcement-list= List announcements
+master.menu.administrator.spam-list= List spam
+
+# master.menu.provider ########################################################
+
+master.menu.provider = Provider
+master.menu.provider.favourite-link = Favourite link
+
+# master.menu.consumer ##########################################################
+
+master.menu.consumer = Consumer
+master.menu.consumer.favourite-link = Favourite link
+
+# master.menu.user-account ####################################################
+
+master.menu.user-account = Account
+master.menu.user-account.general-data = General data
+master.menu.user-account.provider = Provider data
+master.menu.user-account.become-provider = Become a provider
+master.menu.user-account.consumer = Consumer data
+master.menu.user-account.become-consumer = Become a consumer
+
+# master.footer ###############################################################
+
+master.footer.title.about = About us
+master.footer.label.company = Company
+master.footer.label.license = License
+master.footer.title.social = Social
+master.footer.label.linked-in = Linked-In
+master.footer.label.twitter = Twitter
+master.footer.label.instagram = Instagram
+master.footer.label.facebook = Facebook
+master.footer.title.languages = Languages
+master.footer.label.english = English
+master.footer.label.spanish = Spanish
+
+# master.company ##############################################################
+
+master.company.title = Acme Jobs, Inc.
+master.company.text = \
+	Acme Jobs, Inc. is a fictitious company that provides a \
+	platform in order to find a job.
+master.company.name = Acme Jobs, Inc.
+master.company.address = 14 Antonio Banderas, Seville, Andalusia, Spain
+master.company.phone = +954 403 456
+master.company.email = contact@acmejobs.com
+
+# master.license ##############################################################
+
+master.license.title = License
+master.license.text = \
+	You may use this system free of charge, as long as you carefully observe the \
+	existing applicable laws.  Please, note that we do not share any information \
+	about you with any other company.  We only use three cookies, namely: \
+	"JSESSIONID" to identify your work session, "remember" to let you authenticate \
+	automatically for a maximum of 31 days, and "language" to store your language \
+	preferences. Additionally, we store an item called "returnStack" in your browser's \
+	local storage to keep track of the document to which some buttons must return.
