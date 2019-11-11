@@ -1,42 +1,42 @@
 
-package acme.features.provider.request2;
+package acme.features.consumer.offer;
 
 import java.util.Date;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import acme.entities.requests2.Request2;
-import acme.entities.roles.Provider;
+import acme.entities.offers.Offer;
+import acme.entities.roles.Consumer;
 import acme.framework.components.Errors;
 import acme.framework.components.Model;
 import acme.framework.components.Request;
 import acme.framework.services.AbstractCreateService;
 
 @Service
-public class ProviderRequest2CreateService implements AbstractCreateService<Provider, Request2> {
+public class ConsumerOfferCreateService implements AbstractCreateService<Consumer, Offer> {
 
 	@Autowired
-	ProviderRequest2Repository repository;
+	ConsumerOfferRepository repository;
 
 
 	@Override
-	public boolean authorise(final Request<Request2> request) {
+	public boolean authorise(final Request<Offer> request) {
 		assert request != null;
 		return true;
 	}
 
 	@Override
-	public void unbind(final Request<Request2> request, final Request2 entity, final Model model) {
+	public void unbind(final Request<Offer> request, final Offer entity, final Model model) {
 		assert request != null;
 		assert entity != null;
 		assert model != null;
 
-		request.unbind(entity, model, "title", "ticker", "moment", "deadline", "text", "reward");
+		request.unbind(entity, model, "title", "ticker", "moment", "deadline", "text", "minMoney", "maxMoney");
 	}
 
 	@Override
-	public void bind(final Request<Request2> request, final Request2 entity, final Errors errors) {
+	public void bind(final Request<Offer> request, final Offer entity, final Errors errors) {
 		assert request != null;
 		assert entity != null;
 		assert errors != null;
@@ -46,15 +46,15 @@ public class ProviderRequest2CreateService implements AbstractCreateService<Prov
 	}
 
 	@Override
-	public Request2 instantiate(final Request<Request2> request) {
+	public Offer instantiate(final Request<Offer> request) {
 		assert request != null;
-		Request2 result;
-		result = new Request2();
+		Offer result;
+		result = new Offer();
 		return result;
 	}
 
 	@Override
-	public void validate(final Request<Request2> request, final Request2 entity, final Errors errors) {
+	public void validate(final Request<Offer> request, final Offer entity, final Errors errors) {
 		assert request != null;
 		assert entity != null;
 		assert errors != null;
@@ -65,7 +65,7 @@ public class ProviderRequest2CreateService implements AbstractCreateService<Prov
 	}
 
 	@Override
-	public void create(final Request<Request2> request, final Request2 entity) {
+	public void create(final Request<Offer> request, final Offer entity) {
 		assert request != null;
 		assert entity != null;
 
@@ -76,4 +76,5 @@ public class ProviderRequest2CreateService implements AbstractCreateService<Prov
 		this.repository.save(entity);
 
 	}
+
 }

@@ -80,7 +80,7 @@ master.menu.provider.request2 = Crear solicitud
 # master.menu.consumer ##########################################################
 
 master.menu.consumer = Consumidor
-master.menu.consumer.favourite-link = Enlace favorito
+master.menu.consumer.offer = Crear oferta
 
 # master.menu.user-account ####################################################
 
