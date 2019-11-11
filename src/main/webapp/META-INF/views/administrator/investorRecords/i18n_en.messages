@@ -1,0 +1,11 @@
+#administrator.investorRecords.form.label.name= Title:
+#administrator.investorRecords.form.label.sector= Sector:
+#anonymous.investorRecords.form.label.investingStatements= Investing Statements:
+#anonymous.investorRecords.form.label.ratings= Ratings:
+#anonymous.investorRecords.form.button.return= Return
+
+
+
+
+administrator.investorRecords.list.label.name= Name
+administrator.investorRecords.list.label.investingStatements= Investing Statements

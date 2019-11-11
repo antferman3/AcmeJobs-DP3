@@ -1,0 +1,11 @@
+#anonymous.investorRecords.form.label.name= Nombre:
+#anonymous.investorRecords.form.label.sector= Sector:
+#anonymous.investorRecords.form.label.investingStatements= Inversión:
+#anonymous.investorRecords.form.label.ratings= Valoraciones:
+#anonymous.investorRecords.form.button.return= Volver atrás
+
+
+
+
+administrator.investorRecords.list.label.name= Nombre
+administrator.investorRecords.list.label.investingStatements= Inversión realizada
