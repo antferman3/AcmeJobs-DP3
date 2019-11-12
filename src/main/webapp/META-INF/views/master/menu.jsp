@@ -70,6 +70,8 @@
 			<acme:menu-suboption code="master.menu.administrator.spam-list" action="/administrator/spam/list"/>
 			<acme:menu-separator/>
 			<acme:menu-suboption code="master.menu.administrator.announcement-list" action="/administrator/announcement/list"/>
+			<acme:menu-suboption code="master.menu.administrator.announcement-create" action="/administrator/announcement/create"/>
+			
 		</acme:menu-option>
 
 		<acme:menu-option code="master.menu.provider" access="hasRole('Provider')">

@@ -70,7 +70,11 @@ master.menu.administrator = Administrador
 master.menu.administrator.user-accounts = Cuentas de usuario
 master.menu.administrator.shutdown = Parar el sistema
 master.menu.administrator.announcement-list= Listar anuncios
+master.menu.administrator.announcement-create= Crear anuncios
+master.menu.administrator.announcement-update= Actualizar anuncios
+master.menu.administrator.announcement-delete= Eliminar anuncios
 master.menu.administrator.spam-list= Lista de Spam
+
 # master.menu.provider ########################################################
 
 master.menu.provider = Proveedor
