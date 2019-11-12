@@ -13,4 +13,5 @@ consumer.offer.form.button.create= Create
 consumer.offer.list.label.moment= Moment
 consumer.offer.list.label.deadline= Deadline
 consumer.offer.list.label.title= Title
-consumer.offer.list.label.reward= Reward
+
+consumer.offer.error.must-confirm = Must confirm
