@@ -20,7 +20,6 @@ master.welcome.text = \
 	trabajo!
 
 	
-
 # master.menu #################################################################
 
 master.menu.home = Inicio
@@ -79,12 +78,12 @@ master.menu.administrator.spam-list= Lista de Spam
 # master.menu.provider ########################################################
 
 master.menu.provider = Proveedor
-master.menu.provider.favourite-link = Enlace favorito
+master.menu.provider.request2 = Crear solicitud
 
 # master.menu.consumer ##########################################################
 
 master.menu.consumer = Consumidor
-master.menu.consumer.favourite-link = Enlace favorito
+master.menu.consumer.offer-create = Crear oferta
 
 # master.menu.user-account ####################################################
 
