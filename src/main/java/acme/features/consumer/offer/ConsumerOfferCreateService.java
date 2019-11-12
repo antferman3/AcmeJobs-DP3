@@ -58,10 +58,6 @@ public class ConsumerOfferCreateService implements AbstractCreateService<Consume
 		assert request != null;
 		assert entity != null;
 		assert errors != null;
-		//assert !(entity.getReward().getAmount() > 0.);
-		//assert this.esUnico(request, entity) != false;
-		//Date moment = new Date(System.currentTimeMillis() - 1);
-		//assert entity.getDeadline().after(moment);
 	}
 
 	@Override

@@ -22,7 +22,7 @@ public class ConsumerOfferController extends AbstractController<Consumer, Offer>
 	private ConsumerOfferCreateService createService;
 
 
-	// Constructors -----------------------------------------------------------
+	// Constructors --------------------------------------------------------
 
 	@PostConstruct
 	private void initialise() {

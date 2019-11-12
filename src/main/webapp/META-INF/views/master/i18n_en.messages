@@ -19,7 +19,6 @@ master.welcome.text = \
 	Welcome to Acme Jobs! Never before has it been easier to find a \
 	job! \
 	
-
 # master.menu #################################################################
 
 master.menu.home = Home
@@ -82,7 +81,7 @@ master.menu.provider.request2 = Create request
 # master.menu.consumer ##########################################################
 
 master.menu.consumer = Consumer
-master.menu.consumer.offer = Create offer
+master.menu.consumer.offer-create = Create offer
 
 # master.menu.user-account ####################################################
 

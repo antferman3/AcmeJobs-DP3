@@ -20,7 +20,6 @@ master.welcome.text = \
 	trabajo!
 
 	
-
 # master.menu #################################################################
 
 master.menu.home = Inicio
@@ -80,7 +79,7 @@ master.menu.provider.request2 = Crear solicitud
 # master.menu.consumer ##########################################################
 
 master.menu.consumer = Consumidor
-master.menu.consumer.offer = Crear oferta
+master.menu.consumer.offer-create = Crear oferta
 
 # master.menu.user-account ####################################################
 

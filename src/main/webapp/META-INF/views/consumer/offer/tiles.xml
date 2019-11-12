@@ -9,5 +9,4 @@
 	<definition name="consumer/offer/form" extends="master">
 		<put-attribute name="body" type="template" value="../consumer/offer/form.jsp"/>
 	</definition>
-	
 </tiles-definitions>

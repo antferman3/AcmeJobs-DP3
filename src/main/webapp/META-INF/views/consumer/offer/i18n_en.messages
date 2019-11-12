@@ -7,6 +7,8 @@ consumer.offer.form.label.minMoney = Minimum money:
 consumer.offer.form.label.maxMoney = Maximum money:
 consumer.offer.form.label.confirm = Confirm
 consumer.offer.form.button.return= Return
+consumer.offer.form.button.create= Create
+
 
 consumer.offer.list.label.moment= Moment
 consumer.offer.list.label.deadline= Deadline
