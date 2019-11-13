@@ -75,7 +75,8 @@
 		</acme:menu-option>
 
 		<acme:menu-option code="master.menu.provider" access="hasRole('Provider')">
-			<acme:menu-suboption code="master.menu.provider.request2" action="/provider/request2/create"/>
+			<acme:menu-suboption code="master.menu.provider.request2" 
+			action="/provider/request2/create"/>
 		</acme:menu-option>
 
 		<acme:menu-option code="master.menu.consumer" access="hasRole('Consumer')">

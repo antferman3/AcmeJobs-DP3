@@ -6,9 +6,6 @@
 	 
 	 
 <tiles-definitions>
-	<definition name="provider/request2/list" extends="master">
-		<put-attribute name="body" type="template" value="../provider/request2/list.jsp"/>
-	</definition>
 	<definition name="provider/request2/form" extends="master">
 		<put-attribute name="body" type="template" value="../provider/request2/form.jsp"/>
 	</definition>

@@ -9,6 +9,7 @@ import org.springframework.stereotype.Service;
 import acme.entities.requests2.Request2;
 import acme.entities.roles.Provider;
 import acme.framework.components.Errors;
+import acme.framework.components.HttpMethod;
 import acme.framework.components.Model;
 import acme.framework.components.Request;
 import acme.framework.services.AbstractCreateService;
@@ -32,7 +33,12 @@ public class ProviderRequest2CreateService implements AbstractCreateService<Prov
 		assert entity != null;
 		assert model != null;
 
-		request.unbind(entity, model, "title", "ticker", "moment", "deadline", "text", "reward");
+		request.unbind(entity, model, "title", "ticker", "deadline", "text", "reward");
+		if (request.isMethod(HttpMethod.GET)) {
+			model.setAttribute("confirm", "false");
+		} else {
+			request.transfer(model, "confirm");
+		}
 	}
 
 	@Override
@@ -62,6 +68,10 @@ public class ProviderRequest2CreateService implements AbstractCreateService<Prov
 		//assert this.esUnico(request, entity) != false;
 		//Date moment = new Date(System.currentTimeMillis() - 1);
 		//assert entity.getDeadline().after(moment);
+		Boolean isAccepted;
+
+		isAccepted = request.getModel().getBoolean("confirm");
+		errors.state(request, isAccepted, "confirm", "consumer.offer.error.must-confirm");
 	}
 
 	@Override

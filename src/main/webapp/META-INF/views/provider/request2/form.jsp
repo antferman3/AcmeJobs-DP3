@@ -7,13 +7,16 @@
 
 <acme:form>
 	<acme:form-textbox code="provider.request2.form.label.title" path="title"/>
+	<jstl:if test="${commad != 'create'}">
+		<acme:form-moment code="provider.request2.form.label.moment" path="moment"
+			readonly="true"/>
+	</jstl:if>
 	<acme:form-textbox code="provider.request2.form.label.ticker" path="ticker"/> 
-	<acme:form-moment code="provider.request2.form.label.moment" path="moment"/>
 	<acme:form-moment code="provider.request2.form.label.deadline" path ="deadline"/>
 	<acme:form-textarea code="provider.request2.form.label.text" path="text"/>
 	<acme:form-money code="provider.request2.form.label.reward" path="reward"/>
 	<acme:form-checkbox code="provider.request2.form.label.confirm"  path="confirm"/>
-	<acme:form-submit test="${command == create }"
+	<acme:form-submit test="${command == 'create' }"
 	 code="provider.request2.form.button.create"
 	 action="/provider/request2/create" />
 	<acme:form-return code="provider.request2.form.button.return"/> 
