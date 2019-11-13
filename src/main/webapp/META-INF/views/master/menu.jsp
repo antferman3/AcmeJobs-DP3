@@ -70,6 +70,8 @@
 			<acme:menu-suboption code="master.menu.administrator.spam-list" action="/administrator/spam/list"/>
 			<acme:menu-separator/>
 			<acme:menu-suboption code="master.menu.administrator.announcement-list" action="/administrator/announcement/list"/>
+			<acme:menu-suboption code="master.menu.administrator.announcement-create" action="/administrator/announcement/create"/>
+			
 		</acme:menu-option>
 
 		<acme:menu-option code="master.menu.provider" access="hasRole('Provider')">
@@ -78,8 +80,9 @@
 		</acme:menu-option>
 
 		<acme:menu-option code="master.menu.consumer" access="hasRole('Consumer')">
-			<acme:menu-suboption code="master.menu.consumer.favourite-link" action="http://www.example.com/"/>
+			<acme:menu-suboption code="master.menu.consumer.offer-create" action="/consumer/offer/create"/>
 		</acme:menu-option>
+		
 	</acme:menu-left>
 
 	<acme:menu-right>
