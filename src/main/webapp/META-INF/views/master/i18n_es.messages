@@ -72,6 +72,7 @@ master.menu.administrator.user-accounts = Cuentas de usuario
 master.menu.administrator.shutdown = Parar el sistema
 master.menu.administrator.announcement-list= Listar anuncios
 master.menu.administrator.spam-list= Lista de Spam
+master.menu.administrator.challenge = Lista de desafíos
 # master.menu.provider ########################################################
 
 master.menu.provider = Proveedor
