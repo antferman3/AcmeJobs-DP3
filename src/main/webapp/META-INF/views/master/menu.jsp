@@ -32,6 +32,8 @@
 			<acme:menu-suboption code="master.menu.anonymous.announcement-list" action="/anonymous/announcement/list"/>
 			<acme:menu-suboption code="master.menu.anonymous.investorRecords-list" action="/anonymous/investor-records/list"/>
 			<acme:menu-suboption code="master.menu.anonymous.records-list" action="/anonymous/records/list"/>
+			<acme:menu-suboption code="master.menu.anonymous.topInvestorRecords-list" action="/anonymous/top-investor-records/list"/>
+			<acme:menu-suboption code="master.menu.anonymous.topRecords-list" action="/anonymous/top-records/list"/>
 			
 			<acme:menu-option code="master.menu.anonymous.bulletins" access="isAnonymous()">
 				<acme:menu-suboption code="master.menu.anonymous.fernandez-create" action="/anonymous/fernandez-bulletin/create"/>
@@ -70,7 +72,8 @@
 			<acme:menu-suboption code="master.menu.administrator.spam-list" action="/administrator/spam/list"/>
 			<acme:menu-separator/>
 			<acme:menu-suboption code="master.menu.administrator.announcement-list" action="/administrator/announcement/list"/>
-			<acme:menu-suboption code="master.menu.administrator.announcement-create" action="/administrator/announcement/create"/>
+			<acme:menu-suboption code="master.menu.administrator.dashboard.listing" action="/administrator/dashboard/listing" />
+			<acme:menu-suboption code="master.menu.administrator.chart" action="/administrator/chart/chart" />
 			
 		</acme:menu-option>
 

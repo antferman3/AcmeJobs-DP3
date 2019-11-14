@@ -54,6 +54,8 @@ master.menu.anonymous.bulletins = Boletines
 master.menu.anonymous.announcement-list= Listar anuncios
 master.menu.anonymous.investorRecords-list= Listar inversiones
 master.menu.anonymous.records-list= Listar registro  de compañías
+master.menu.anonymous.topInvestorRecords-list= Listar inversiones top
+master.menu.anonymous.topRecords-list= Listar registro  de compañías top
 
 # master.menu.authenticated ###################################################
 master.menu.authenticated= Autenticado
@@ -74,6 +76,8 @@ master.menu.administrator.announcement-create= Crear anuncios
 master.menu.administrator.announcement-update= Actualizar anuncios
 master.menu.administrator.announcement-delete= Eliminar anuncios
 master.menu.administrator.spam-list= Lista de Spam
+master.menu.administrator.dashboard.listing= Dashboard
+master.menu.administrator.chart= Chart
 
 # master.menu.provider ########################################################
 

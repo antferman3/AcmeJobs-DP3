@@ -13,7 +13,6 @@
 	</jstl:if>
 	<acme:form-url code="administrator.announcement.form.label.moreInfo" path = "moreInfo"/>
 	<acme:form-textarea code="administrator.announcement.form.label.text" path="text"/>
-	
 	<acme:form-submit test="${command=='show' }" code="administrator.announcement.form.button.update"
 		action="/administrator/announcement/update"/>
 	<acme:form-submit test="${command=='show' }" code="administrator.announcement.form.button.delete"
