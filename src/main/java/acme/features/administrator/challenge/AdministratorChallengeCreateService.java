@@ -1,5 +1,4 @@
 /*
- * AuthenticatedConsumerController.java
  *
  * Copyright (c) 2019 Rafael Corchuelo.
  *
@@ -51,7 +50,7 @@ public class AdministratorChallengeCreateService implements AbstractCreateServic
 		assert entity != null;
 		assert model != null;
 
-		request.unbind(entity, model, "title", "description");
+		request.unbind(entity, model, "title", "description", "goalGold", "goalSilver", "goalBronze", "rewardGold", "rewardSilver", "rewardBronze", "deadline");
 
 	}
 

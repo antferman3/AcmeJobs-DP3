@@ -8,5 +8,5 @@
 	<acme:list-column code="administrator.challenge.list.label.description" path="description" width="40%"/>
 </acme:list>
 <acme:form>
-	<acme:form-submit code="administrator.challenge.list.button.create" action="/administrator/challenge/create"/>
+	<acme:form-return code="administrator.challenge.list.button.create" action="/administrator/challenge/create"/>
 </acme:form>
