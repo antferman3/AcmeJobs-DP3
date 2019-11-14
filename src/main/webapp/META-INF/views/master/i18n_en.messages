@@ -55,6 +55,8 @@ master.menu.anonymous.soto-list = List SotoBulletin
 master.menu.anonymous.announcement-list= List announcements
 master.menu.anonymous.investorRecords-list= List investor records
 master.menu.anonymous.records-list= List company records
+master.menu.anonymous.topInvestorRecords-list= List top investor records
+master.menu.anonymous.topRecords-list= List top company records
 
 # master.menu.authenticated ###################################################
 master.menu.authenticated= Authenticated
@@ -75,6 +77,8 @@ master.menu.administrator.announcement-create= Create announcements
 master.menu.administrator.announcement-update= Update announcements
 master.menu.administrator.announcement-delete= Delete announcements
 master.menu.administrator.spam-list= List spam
+master.menu.administrator.dashboard.listing= Dashboard
+master.menu.administrator.chart= Chart
 
 # master.menu.provider ########################################################
 
