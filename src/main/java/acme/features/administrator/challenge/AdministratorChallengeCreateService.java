@@ -42,7 +42,7 @@ public class AdministratorChallengeCreateService implements AbstractCreateServic
 		assert entity != null;
 		assert errors != null;
 
-		request.bind(entity, errors, "deadline");
+		request.bind(entity, errors);
 	}
 
 	@Override
@@ -52,6 +52,7 @@ public class AdministratorChallengeCreateService implements AbstractCreateServic
 		assert model != null;
 
 		request.unbind(entity, model, "title", "description");
+
 	}
 
 	@Override
