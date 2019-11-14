@@ -70,8 +70,7 @@
 			<acme:menu-suboption code="master.menu.administrator.spam-list" action="/administrator/spam/list"/>
 			<acme:menu-separator/>
 			<acme:menu-suboption code="master.menu.administrator.announcement-list" action="/administrator/announcement/list"/>
-			<acme:menu-suboption code="master.menu.administrator.investorRecords-list" action="/administrator/investorRecords/list"/>
-			<acme:menu-suboption code="master.menu.administrator.investorRecords-create" action="/administrator/investorRecords/create"/>
+			<acme:menu-suboption code="master.menu.administrator.investorRecords-list" action="/administrator/investor-records/list"/>
 		</acme:menu-option>
 
 		<acme:menu-option code="master.menu.provider" access="hasRole('Provider')">

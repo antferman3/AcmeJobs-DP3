@@ -1,11 +1,12 @@
-#anonymous.investorRecords.form.label.name= Nombre:
-#anonymous.investorRecords.form.label.sector= Sector:
-#anonymous.investorRecords.form.label.investingStatements= InversiÛn:
-#anonymous.investorRecords.form.label.ratings= Valoraciones:
-#anonymous.investorRecords.form.button.return= Volver atr·s
+administrator.investorRecords.form.label.name= Nombre:
+administrator.investorRecords.form.label.sector= Sector:
+administrator.investorRecords.form.label.investingStatements= Inversi√≥n:
+administrator.investorRecords.form.label.ratings= Valoraciones:
+administrator.investorRecords.form.button.return= Volver atr√°s
 
-
-
+administrator.investorRecords.form.button.create= Crear
+administrator.investorRecords.form.button.delete= Eliminar
+administrator.investorRecords.form.button.update= Actualizar
 
 administrator.investorRecords.list.label.name= Nombre
-administrator.investorRecords.list.label.investingStatements= InversiÛn realizada
+administrator.investorRecords.list.label.investingStatements= Inversi√≥n realizada

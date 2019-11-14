@@ -2,6 +2,7 @@
 package acme.features.administrator.investorRecords;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import acme.entities.investorRecords.InvestorRecords;
 import acme.framework.components.Errors;
@@ -10,6 +11,7 @@ import acme.framework.components.Request;
 import acme.framework.entities.Administrator;
 import acme.framework.services.AbstractUpdateService;
 
+@Service
 public class AdministratorInvestorRecordsUpdateService implements AbstractUpdateService<Administrator, InvestorRecords> {
 
 	@Autowired
@@ -60,7 +62,7 @@ public class AdministratorInvestorRecordsUpdateService implements AbstractUpdate
 		assert request != null;
 		assert entity != null;
 		assert errors != null;
-		assert entity.getInvestingStatements().getCurrency() == "EUR";
+		assert entity.getInvestingStatements().getCurrency().equals("EUR");
 
 	}
 

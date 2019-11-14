@@ -2,6 +2,7 @@
 package acme.features.administrator.investorRecords;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import acme.entities.investorRecords.InvestorRecords;
 import acme.framework.components.Errors;
@@ -10,6 +11,7 @@ import acme.framework.components.Request;
 import acme.framework.entities.Administrator;
 import acme.framework.services.AbstractDeleteService;
 
+@Service
 public class AdministratorInvestorRecordsDeleteService implements AbstractDeleteService<Administrator, InvestorRecords> {
 
 	@Autowired

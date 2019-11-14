@@ -33,4 +33,9 @@ public class InvestorRecords extends DomainEntity {
 	@Range(min = 0, max = 5)
 	private Double				ratings;
 
+
+	public InvestorRecords() {
+
+	}
+
 }

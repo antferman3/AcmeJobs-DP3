@@ -8,3 +8,7 @@
 	<acme:list-column code="administrator.investorRecords.list.label.investingStatements" path="investingStatements" width="40%" />
 
 </acme:list>
+
+<acme:form>
+	<acme:form-return code="administrator.investorRecords.form.button.create" action="/administrator/investor-records/create"/>
+</acme:form>
