@@ -74,9 +74,15 @@ master.menu.administrator.user-accounts = User accounts
 master.menu.administrator.challenge = List challenges
 master.menu.administrator.shutdown = Shut down
 master.menu.administrator.announcement-list= List announcements
+
+master.menu.administrator.investorRecords-list= List investor records
+master.menu.administrator.investorRecords-create= Create investor records
+master.menu.administrator.investorRecords-update= Update investor records
+master.menu.administrator.investorRecords-delete= Delete investor records
 master.menu.administrator.announcement-create= Create announcements
 master.menu.administrator.announcement-update= Update announcements
 master.menu.administrator.announcement-delete= Delete announcements
+
 master.menu.administrator.spam-list= List spam
 master.menu.administrator.dashboard.listing= Dashboard
 master.menu.administrator.chart= Chart

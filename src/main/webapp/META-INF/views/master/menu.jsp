@@ -73,6 +73,9 @@
 			<acme:menu-separator/>
 			<acme:menu-suboption code="master.menu.administrator.announcement-list" action="/administrator/announcement/list"/>
 
+			<acme:menu-suboption code="master.menu.administrator.investorRecords-list" action="/administrator/investor-records/list"/>
+
+
 			<acme:menu-separator/>
 			<acme:menu-suboption code="master.menu.administrator.challenge" action="/administrator/challenge/list"/>
 			
@@ -81,6 +84,7 @@
 			<acme:menu-suboption code="master.menu.administrator.chart" action="/administrator/chart/chart" />
 
 			
+
 		</acme:menu-option>
 
 		<acme:menu-option code="master.menu.provider" access="hasRole('Provider')">

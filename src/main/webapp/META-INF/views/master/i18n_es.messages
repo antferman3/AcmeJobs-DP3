@@ -72,9 +72,16 @@ master.menu.administrator = Administrador
 master.menu.administrator.user-accounts = Cuentas de usuario
 master.menu.administrator.shutdown = Parar el sistema
 master.menu.administrator.announcement-list= Listar anuncios
+
+master.menu.administrator.investorRecords-list= Listar inversiones
+master.menu.administrator.investorRecords-create= Crear inversiones
+master.menu.administrator.investorRecords-update= Actualizar inversiones
+master.menu.administrator.investorRecords-delete= Eliminar inversiones
+
 master.menu.administrator.announcement-create= Crear anuncios
 master.menu.administrator.announcement-update= Actualizar anuncios
 master.menu.administrator.announcement-delete= Eliminar anuncios
+
 master.menu.administrator.spam-list= Lista de Spam
 
 master.menu.administrator.challenge = Lista de desafíos
