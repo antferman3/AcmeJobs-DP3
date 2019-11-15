@@ -1,0 +1,17 @@
+consumer.offer.form.label.title= Nombre:
+consumer.offer.form.label.ticker= Id:
+consumer.offer.form.label.moment= Momento:
+consumer.offer.form.label.deadline= Fecha límite:
+consumer.offer.form.label.text= Texto:
+consumer.offer.form.label.minMoney= Dinero mínimo:
+consumer.offer.form.label.maxMoney= Dinero máximo:
+consumer.offer.form.label.confirm = Confirmar
+consumer.offer.form.button.return= Volver
+consumer.offer.form.button.create= Crear
+
+
+consumer.offer.list.label.moment= Momento
+consumer.offer.list.label.deadline= Fecha límite
+consumer.offer.list.label.title= Título
+
+consumer.offer.error.must-confirm = Debe confirmar
