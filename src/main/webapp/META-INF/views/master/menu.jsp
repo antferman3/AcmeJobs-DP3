@@ -72,8 +72,14 @@
 			<acme:menu-suboption code="master.menu.administrator.spam-list" action="/administrator/spam/list"/>
 			<acme:menu-separator/>
 			<acme:menu-suboption code="master.menu.administrator.announcement-list" action="/administrator/announcement/list"/>
+
+			<acme:menu-separator/>
+			<acme:menu-suboption code="master.menu.administrator.challenge" action="/administrator/challenge/list"/>
+			
+
 			<acme:menu-suboption code="master.menu.administrator.dashboard.listing" action="/administrator/dashboard/listing" />
 			<acme:menu-suboption code="master.menu.administrator.chart" action="/administrator/chart/chart" />
+
 			
 		</acme:menu-option>
 
