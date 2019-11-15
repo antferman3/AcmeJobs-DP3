@@ -8,5 +8,7 @@ administrator.investorRecords.form.button.create= Create
 administrator.investorRecords.form.button.delete= delete
 administrator.investorRecords.form.button.update= Update
 
+administrator.investorRecords.must-be-euros= The currency must be Euro
+
 administrator.investorRecords.list.label.name= Name
 administrator.investorRecords.list.label.investingStatements= Investing Statements

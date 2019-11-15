@@ -57,8 +57,8 @@ public class AdministratorInvestorRecordsCreateService implements AbstractCreate
 		assert request != null;
 		assert entity != null;
 		assert errors != null;
-		assert entity.getInvestingStatements().getCurrency().equals("EUR");
-
+		Boolean restriccion = entity.getInvestingStatements().getCurrency().equals("EUR");
+		errors.state(request, restriccion, "investingStatements", "administrator.investorRecords.must-be-euros");
 	}
 
 	@Override
