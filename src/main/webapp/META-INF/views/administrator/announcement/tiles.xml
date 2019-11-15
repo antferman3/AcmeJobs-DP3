@@ -12,5 +12,4 @@
 	<definition name="administrator/announcement/form" extends="master">
 		<put-attribute name="body" type="template" value="../administrator/announcement/form.jsp"/>
 	</definition>
-	
 </tiles-definitions>
