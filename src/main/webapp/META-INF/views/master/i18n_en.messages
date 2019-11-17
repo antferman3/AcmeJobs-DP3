@@ -73,6 +73,8 @@ master.menu.administrator.user-accounts = User accounts
 master.menu.administrator.shutdown = Shut down
 master.menu.administrator.announcement-list= List announcements
 master.menu.administrator.spam-list= List spam
+master.menu.administrator.records-list= List company records
+
 
 # master.menu.provider ########################################################
 
