@@ -11,7 +11,7 @@ import lombok.Setter;
 @Entity
 @Getter
 @Setter
-public class NonCommercialBanner extends banner {
+public class NonCommercialBanner extends Banner {
 
 	private static final long	serialVersionUID	= 1L;
 
