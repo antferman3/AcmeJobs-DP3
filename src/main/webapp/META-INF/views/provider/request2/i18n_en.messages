@@ -16,3 +16,4 @@ provider.request2.list.label.title= Title
 provider.request2.list.label.reward= Reward
 
 provider.request2.error.must-confirm = Must confirm
+provider.request2.error.incorrect-currency = Incorrect currency
