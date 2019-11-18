@@ -132,7 +132,7 @@
 		<property name="name" value="Ejemplo de investor records"/>
 		<property name="sector" value="sector de tecnología"/>
 		<property name="investingStatements" value="EUR 100.00"/>
-		<property name="ratings"><null/></property>
+		<property name="ratings" value="5.0"/>
 	</bean>
 	
 	<bean id="investorRecords02" class="acme.entities.investorRecords.InvestorRecords">
@@ -152,7 +152,9 @@
  
 	<bean id="challenge01" class="acme.entities.challenge.Challenge">
 		<property name="title" value="Ejemplo de challenge número 1"/>
-		<property name="deadline" value="2019/12/30 13:19"/>
+
+		<property name="deadline" value="2020/11/09 13:19"/>
+
 		<property name="description" value="Descripción primer challenge"/>
 		<property name="goalGold" value="goal gold"/>
 		<property name="goalSilver" value="goal silver"/>
@@ -227,6 +229,22 @@
 	
 	</bean>
 	
+	<bean id="commercialBanner01" class="acme.entities.banner.CommercialBanner">
+		<property name="picture"
+			value="https://www.hola.com/imagenes/estar-bien/20180831128704/ronroneo-gatos-causas/0-595-638/gato-ronroneo-1-t.jpg" />
+		<property name="slogan" value="Un gato very guapo" />
+		<property name="targetURL" value="https://www.mundogatos.com/foros" />
+		<property name="creditCard" value="5224746025394443" />
+	</bean>
+
+
+	<bean id="nonCommercialBanner01" class="acme.entities.banner.NonCommercialBanner">
+		<property name="picture"
+			value="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQQF073qYaGwa7pO2orf-CaVqHFzQHaNQaAf53m_hDrGvaBqfRy" />
+		<property name="slogan" value="Una tortuga very lenta" />
+		<property name="targetURL" value="http://www.terrariofilia.com/foro-tortugas-acuaticas/" />
+		<property name="jingle" value="" />
+	</bean>
 
 </beans>
 

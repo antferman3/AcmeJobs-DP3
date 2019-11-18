@@ -20,7 +20,6 @@ master.welcome.text = \
 	trabajo!
 
 	
-
 # master.menu #################################################################
 
 master.menu.home = Inicio
@@ -55,6 +54,8 @@ master.menu.anonymous.bulletins = Boletines
 master.menu.anonymous.announcement-list= Listar anuncios
 master.menu.anonymous.investorRecords-list= Listar inversiones
 master.menu.anonymous.records-list= Listar registro  de compañías
+master.menu.anonymous.topInvestorRecords-list= Listar inversiones top
+master.menu.anonymous.topRecords-list= Listar registro  de compañías top
 
 # master.menu.authenticated ###################################################
 master.menu.authenticated= Autenticado
@@ -71,17 +72,36 @@ master.menu.administrator = Administrador
 master.menu.administrator.user-accounts = Cuentas de usuario
 master.menu.administrator.shutdown = Parar el sistema
 master.menu.administrator.announcement-list= Listar anuncios
+
+master.menu.administrator.investorRecords-list= Listar inversiones
+master.menu.administrator.investorRecords-create= Crear inversiones
+master.menu.administrator.investorRecords-update= Actualizar inversiones
+master.menu.administrator.investorRecords-delete= Eliminar inversiones
+
+master.menu.administrator.announcement-create= Crear anuncios
+master.menu.administrator.announcement-update= Actualizar anuncios
+master.menu.administrator.announcement-delete= Eliminar anuncios
+
 master.menu.administrator.spam-list= Lista de Spam
+
 master.menu.administrator.records-list= Lista de Registros de Compañías
+
+
+master.menu.administrator.challenge = Lista de desafíos
+
+master.menu.administrator.dashboard.listing= Dashboard
+master.menu.administrator.chart= Chart
+
+
 # master.menu.provider ########################################################
 
 master.menu.provider = Proveedor
-master.menu.provider.favourite-link = Enlace favorito
+master.menu.provider.request2 = Crear solicitud
 
 # master.menu.consumer ##########################################################
 
 master.menu.consumer = Consumidor
-master.menu.consumer.favourite-link = Enlace favorito
+master.menu.consumer.offer-create = Crear oferta
 
 # master.menu.user-account ####################################################
 

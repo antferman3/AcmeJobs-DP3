@@ -19,7 +19,6 @@ master.welcome.text = \
 	Welcome to Acme Jobs! Never before has it been easier to find a \
 	job! \
 	
-
 # master.menu #################################################################
 
 master.menu.home = Home
@@ -56,6 +55,8 @@ master.menu.anonymous.soto-list = List SotoBulletin
 master.menu.anonymous.announcement-list= List announcements
 master.menu.anonymous.investorRecords-list= List investor records
 master.menu.anonymous.records-list= List company records
+master.menu.anonymous.topInvestorRecords-list= List top investor records
+master.menu.anonymous.topRecords-list= List top company records
 
 # master.menu.authenticated ###################################################
 master.menu.authenticated= Authenticated
@@ -70,21 +71,35 @@ master.menu.authenticated.records-list= List company records
 
 master.menu.administrator = Administrator
 master.menu.administrator.user-accounts = User accounts
+master.menu.administrator.challenge = List challenges
 master.menu.administrator.shutdown = Shut down
 master.menu.administrator.announcement-list= List announcements
+
+master.menu.administrator.investorRecords-list= List investor records
+master.menu.administrator.investorRecords-create= Create investor records
+master.menu.administrator.investorRecords-update= Update investor records
+master.menu.administrator.investorRecords-delete= Delete investor records
+master.menu.administrator.announcement-create= Create announcements
+master.menu.administrator.announcement-update= Update announcements
+master.menu.administrator.announcement-delete= Delete announcements
+
 master.menu.administrator.spam-list= List spam
+
 master.menu.administrator.records-list= List company records
+
+master.menu.administrator.dashboard.listing= Dashboard
+master.menu.administrator.chart= Chart
 
 
 # master.menu.provider ########################################################
 
 master.menu.provider = Provider
-master.menu.provider.favourite-link = Favourite link
+master.menu.provider.request2 = Create request
 
 # master.menu.consumer ##########################################################
 
 master.menu.consumer = Consumer
-master.menu.consumer.favourite-link = Favourite link
+master.menu.consumer.offer-create = Create offer
 
 # master.menu.user-account ####################################################
 

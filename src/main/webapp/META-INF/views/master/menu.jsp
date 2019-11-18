@@ -32,6 +32,8 @@
 			<acme:menu-suboption code="master.menu.anonymous.announcement-list" action="/anonymous/announcement/list"/>
 			<acme:menu-suboption code="master.menu.anonymous.investorRecords-list" action="/anonymous/investor-records/list"/>
 			<acme:menu-suboption code="master.menu.anonymous.records-list" action="/anonymous/records/list"/>
+			<acme:menu-suboption code="master.menu.anonymous.topInvestorRecords-list" action="/anonymous/top-investor-records/list"/>
+			<acme:menu-suboption code="master.menu.anonymous.topRecords-list" action="/anonymous/top-records/list"/>
 			
 			<acme:menu-option code="master.menu.anonymous.bulletins" access="isAnonymous()">
 				<acme:menu-suboption code="master.menu.anonymous.fernandez-create" action="/anonymous/fernandez-bulletin/create"/>
@@ -40,7 +42,7 @@
 				<acme:menu-suboption code="master.menu.anonymous.guerrero-list" action="/anonymous/guerrero-bulletin/list"/>
 				<acme:menu-suboption code="master.menu.anonymous.garcia-create" action="/anonymous/garcia-bulletin/create"/>
 				<acme:menu-suboption code="master.menu.anonymous.garcia-list" action="/anonymous/garcia-bulletin/list"/>
-        <acme:menu-suboption code="master.menu.anonymous.hu-create" action="/anonymous/hu-bulletin/create"/>
+      	   <acme:menu-suboption code="master.menu.anonymous.hu-create" action="/anonymous/hu-bulletin/create"/>
 				<acme:menu-suboption code="master.menu.anonymous.hu-list" action="/anonymous/hu-bulletin/list"/>
 				<acme:menu-suboption code="master.menu.anonymous.soto-create" action="/anonymous/soto-bulletin/create"/>
 				<acme:menu-suboption code="master.menu.anonymous.soto-list" action="/anonymous/soto-bulletin/list"/>
@@ -70,17 +72,35 @@
 			<acme:menu-suboption code="master.menu.administrator.spam-list" action="/administrator/spam/list"/>
 			<acme:menu-separator/>
 			<acme:menu-suboption code="master.menu.administrator.announcement-list" action="/administrator/announcement/list"/>
+
 			<acme:menu-separator/>
 			<acme:menu-suboption code="master.menu.administrator.records-list" action="/administrator/records/list"/>
+
+
+			<acme:menu-suboption code="master.menu.administrator.investorRecords-list" action="/administrator/investor-records/list"/>
+
+
+			<acme:menu-separator/>
+			<acme:menu-suboption code="master.menu.administrator.challenge" action="/administrator/challenge/list"/>
+			
+
+			<acme:menu-suboption code="master.menu.administrator.dashboard.listing" action="/administrator/dashboard/listing" />
+			<acme:menu-suboption code="master.menu.administrator.chart" action="/administrator/chart/chart" />
+
+			
+
+
 		</acme:menu-option>
 
 		<acme:menu-option code="master.menu.provider" access="hasRole('Provider')">
-			<acme:menu-suboption code="master.menu.provider.favourite-link" action="http://www.example.com/"/>
+			<acme:menu-suboption code="master.menu.provider.request2" 
+			action="/provider/request2/create"/>
 		</acme:menu-option>
 
 		<acme:menu-option code="master.menu.consumer" access="hasRole('Consumer')">
-			<acme:menu-suboption code="master.menu.consumer.favourite-link" action="http://www.example.com/"/>
+			<acme:menu-suboption code="master.menu.consumer.offer-create" action="/consumer/offer/create"/>
 		</acme:menu-option>
+		
 	</acme:menu-left>
 
 	<acme:menu-right>
