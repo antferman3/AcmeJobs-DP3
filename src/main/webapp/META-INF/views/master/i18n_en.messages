@@ -84,8 +84,12 @@ master.menu.administrator.announcement-update= Update announcements
 master.menu.administrator.announcement-delete= Delete announcements
 
 master.menu.administrator.spam-list= List spam
+
+master.menu.administrator.records-list= List company records
+
 master.menu.administrator.dashboard.listing= Dashboard
 master.menu.administrator.chart= Chart
+
 
 # master.menu.provider ########################################################
 
