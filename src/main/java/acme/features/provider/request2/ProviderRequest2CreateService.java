@@ -68,10 +68,16 @@ public class ProviderRequest2CreateService implements AbstractCreateService<Prov
 		//assert this.esUnico(request, entity) != false;
 		//Date moment = new Date(System.currentTimeMillis() - 1);
 		//assert entity.getDeadline().after(moment);
+		assert entity.getReward().getCurrency() != "EUR";
+
 		Boolean isAccepted;
+		Boolean isEur;
 
 		isAccepted = request.getModel().getBoolean("confirm");
-		errors.state(request, isAccepted, "confirm", "consumer.offer.error.must-confirm");
+		errors.state(request, isAccepted, "confirm", "provider.request2.error.must-confirm");
+
+		isEur = entity.getReward().getCurrency().equals("EUR");
+		errors.state(request, isEur, "reward", "provider.request2.error.incorrect-currency");
 	}
 
 	@Override

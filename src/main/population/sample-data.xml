@@ -197,7 +197,7 @@
 		<property name="CEO" value="Horacio Hu"/>
 		<property name="activities" value="Preparación de Brokers"/>
 		<property name="web" value="http://www.jola.com"/>
-	    <property name="phone" value="+999 673849979"/>
+	    <property name="phone" value="+34 (9999) 673849979"/> <!-- 999 673849979 -->
 	    <property name="email" value="chaohuchu@gmail.com"/>
 	    <property name="incorporated" value="false"/>
 	    <property name="stars" value="2.4"/>
@@ -210,7 +210,7 @@
 		<property name="CEO" value="Antonio Manuel Serrano Rodríguez"/>
 		<property name="activities" value="Venta de productos para mascotas"/>
 		<property name="web" value="http://www.royalcanin.com"/>
-	    <property name="phone" value="6738499791"/>
+	    <property name="phone" value="+34 (9999) 673849979"/> <!-- 6738499791 -->
 	    <property name="email" value="royalcanin@gmail.com"/>
 	    <property name="incorporated" value="false"/>
 	    <property name="stars" value="4.4"/>
