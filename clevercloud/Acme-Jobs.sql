@@ -152,6 +152,32 @@ INSERT INTO `authenticated` VALUES (5,0,3);
 UNLOCK TABLES;
 
 --
+-- Table structure for table `banner`
+--
+
+DROP TABLE IF EXISTS `banner`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `banner` (
+  `id` int(11) NOT NULL,
+  `version` int(11) NOT NULL,
+  `picture` varchar(255) DEFAULT NULL,
+  `slogan` varchar(255) DEFAULT NULL,
+  `targeturl` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `banner`
+--
+
+LOCK TABLES `banner` WRITE;
+/*!40000 ALTER TABLE `banner` DISABLE KEYS */;
+/*!40000 ALTER TABLE `banner` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `challenge`
 --
 
@@ -180,8 +206,36 @@ CREATE TABLE `challenge` (
 
 LOCK TABLES `challenge` WRITE;
 /*!40000 ALTER TABLE `challenge` DISABLE KEYS */;
-INSERT INTO `challenge` VALUES (24,0,'2019-11-09 12:19:00.000000','Descripción primer challenge','goal bronze','goal gold','goal silver','reward bronze','reward gold','reward silver','Ejemplo de challenge número 1'),(25,0,'2020-11-05 18:19:00.000000','Descripción segundo challenge','goal bronze','goal gold','goal silver','reward bronze','reward gold','reward silver','Ejemplo de challenge número 2');
+INSERT INTO `challenge` VALUES (24,0,'2020-11-09 12:19:00.000000','Descripción primer challenge','goal bronze','goal gold','goal silver','reward bronze','reward gold','reward silver','Ejemplo de challenge número 1'),(25,0,'2020-11-05 18:19:00.000000','Descripción segundo challenge','goal bronze','goal gold','goal silver','reward bronze','reward gold','reward silver','Ejemplo de challenge número 2');
 /*!40000 ALTER TABLE `challenge` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `commercial_banner`
+--
+
+DROP TABLE IF EXISTS `commercial_banner`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `commercial_banner` (
+  `id` int(11) NOT NULL,
+  `version` int(11) NOT NULL,
+  `picture` varchar(255) DEFAULT NULL,
+  `slogan` varchar(255) DEFAULT NULL,
+  `targeturl` varchar(255) DEFAULT NULL,
+  `credit_card` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `commercial_banner`
+--
+
+LOCK TABLES `commercial_banner` WRITE;
+/*!40000 ALTER TABLE `commercial_banner` DISABLE KEYS */;
+INSERT INTO `commercial_banner` VALUES (30,0,'https://www.corbatasygemelos.es/2441-large_default/corbata-rayas-rojas-y-azules-ii.jpg','Una corbata','https://www.corbatasygemelos.es','4166944713599133');
+/*!40000 ALTER TABLE `commercial_banner` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
@@ -392,7 +446,7 @@ CREATE TABLE `hibernate_sequence` (
 
 LOCK TABLES `hibernate_sequence` WRITE;
 /*!40000 ALTER TABLE `hibernate_sequence` DISABLE KEYS */;
-INSERT INTO `hibernate_sequence` VALUES (30);
+INSERT INTO `hibernate_sequence` VALUES (32);
 /*!40000 ALTER TABLE `hibernate_sequence` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -449,8 +503,36 @@ CREATE TABLE `investor_records` (
 
 LOCK TABLES `investor_records` WRITE;
 /*!40000 ALTER TABLE `investor_records` DISABLE KEYS */;
-INSERT INTO `investor_records` VALUES (21,0,100,'EUR','Ejemplo de investor records',NULL,'sector de tecnología'),(22,0,200,'EUR','Ejemplo 2 de investor records',2.5,'sector industrial'),(23,0,300,'EUR','Ejemplo 3 de investor records',NULL,'sector de investigación');
+INSERT INTO `investor_records` VALUES (21,0,100,'EUR','Ejemplo de investor records',5,'sector de tecnología'),(22,0,200,'EUR','Ejemplo 2 de investor records',2.5,'sector industrial'),(23,0,300,'EUR','Ejemplo 3 de investor records',3.3,'sector de investigación');
 /*!40000 ALTER TABLE `investor_records` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `non_commercial_banner`
+--
+
+DROP TABLE IF EXISTS `non_commercial_banner`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `non_commercial_banner` (
+  `id` int(11) NOT NULL,
+  `version` int(11) NOT NULL,
+  `picture` varchar(255) DEFAULT NULL,
+  `slogan` varchar(255) DEFAULT NULL,
+  `targeturl` varchar(255) DEFAULT NULL,
+  `jingle` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `non_commercial_banner`
+--
+
+LOCK TABLES `non_commercial_banner` WRITE;
+/*!40000 ALTER TABLE `non_commercial_banner` DISABLE KEYS */;
+INSERT INTO `non_commercial_banner` VALUES (31,0,'https://uh.gsstatic.es/sfAttachPlugin/getCachedContent/id/966603/width/515/height/386','Una Rosalia muy premiada','https://www.youtube.com/watch?v=5zwpwbdGNIk','');
+/*!40000 ALTER TABLE `non_commercial_banner` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
@@ -544,7 +626,7 @@ CREATE TABLE `records` (
 
 LOCK TABLES `records` WRITE;
 /*!40000 ALTER TABLE `records` DISABLE KEYS */;
-INSERT INTO `records` VALUES (26,0,'Manuel Popov','Preparación de Brokers','Lenovo','lenovo@gmail.com',_binary '','+34 (9999) 673849979','Inversiones',3.4,'http://www.jola.com'),(27,0,'Horacio Hu','Preparación de Brokers','Chao','chaohuchu@gmail.com',_binary '\0','+999 673849979','Inversiones',4.4,'http://www.jola.com'),(28,0,'Horacio Hu','Preparación de Brokers','Chao','chaohuchu@gmail.com',_binary '\0','6738499791','Inversiones',4.4,'http://www.jola.com');
+INSERT INTO `records` VALUES (26,0,'Manuel Popov','Preparación de Brokers','Lenovo','lenovo@gmail.com',_binary '','+34 (9999) 673849979','Inversiones',3.4,'http://www.jola.com'),(27,0,'Horacio Hu','Preparación de Brokers','Chao','chaohuchu@gmail.com',_binary '\0','+34 (9999) 673849979','Inversiones',2.4,'http://www.jola.com'),(28,0,'Antonio Manuel Serrano Rodríguez','Venta de productos para mascotas','Royal Canin','royalcanin@gmail.com',_binary '\0','+34 (9999) 673849979','Mascotas',4.4,'http://www.royalcanin.com');
 /*!40000 ALTER TABLE `records` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -713,7 +795,7 @@ CREATE TABLE `user_account` (
 
 LOCK TABLES `user_account` WRITE;
 /*!40000 ALTER TABLE `user_account` DISABLE KEYS */;
-INSERT INTO `user_account` VALUES (1,0,_binary '\0','john.doe@acme.com','John','Doe','$2a$05$f7ye8aYmakD9yE5jYbjIeOxoBZWmS4aE4jxvXn.hPxs/RXFcHkzPu','anonymous'),(3,0,_binary '','administrator@acme.com','Administrator','Acme.com','$2a$05$yC0zuLvRgrr5e6ndGTj1YOyvPrmqvUGgnbOQE4xeysv6/TqdiSNPa','administrator');
+INSERT INTO `user_account` VALUES (1,0,_binary '\0','john.doe@acme.com','John','Doe','$2a$05$wV1HiFB3m8t8Fq0l8drNXe5dleIC86rHLOyRBY3hLhfziGFxwctUm','anonymous'),(3,0,_binary '','administrator@acme.com','Administrator','Acme.com','$2a$05$UNoZHR2MhRr6z8mRXwNZ..DsBZwsfTn5MoQDsdmqwhC0NleWmXfw6','administrator');
 /*!40000 ALTER TABLE `user_account` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -726,4 +808,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2019-11-06 16:18:32
+-- Dump completed on 2019-11-19 22:21:07
