@@ -2,6 +2,10 @@
 administrator.challenge.list.label.title = Título:
 administrator.challenge.list.label.description = Descripción:
 administrator.challenge.list.button.create = Crear
+
+administrator.challenge.must-be-after = La fecha límite debe ser posterior a la fecha actual
+
+
 administrator.challenge.form.button.update = Actualizar
 administrator.challenge.form.button.delete = Eliminar
 administrator.challenge.form.button.create = Crear

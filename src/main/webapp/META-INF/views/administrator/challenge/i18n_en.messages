@@ -9,6 +9,9 @@ administrator.challenge.form.label.rewardGold = Reward gold
 administrator.challenge.form.label.rewardSilver = Reward silver 
 administrator.challenge.form.label.rewardBronze = Reward bronze
 
+administrator.challenge.must-be-after = Deadline must be after current time
+
+
 administrator.challenge.list.label.description = Description
 administrator.challenge.list.button.create = Create
 administrator.challenge.form.button.update = Update

@@ -31,7 +31,7 @@ public class AdministratorInvestorRecordsCreateService implements AbstractCreate
 		assert entity != null;
 		assert errors != null;
 
-		request.bind(entity, errors, "ratings");
+		request.bind(entity, errors);
 
 	}
 
@@ -41,14 +41,14 @@ public class AdministratorInvestorRecordsCreateService implements AbstractCreate
 		assert entity != null;
 		assert model != null;
 
-		request.unbind(entity, model, "name", "sector", "investingStatements");
+		request.unbind(entity, model, "name", "sector", "investingStatements", "ratings");
 
 	}
 
 	@Override
 	public InvestorRecords instantiate(final Request<InvestorRecords> request) {
-		InvestorRecords result = new InvestorRecords();
-
+		InvestorRecords result;
+		result = new InvestorRecords();
 		return result;
 	}
 
@@ -57,8 +57,10 @@ public class AdministratorInvestorRecordsCreateService implements AbstractCreate
 		assert request != null;
 		assert entity != null;
 		assert errors != null;
-		Boolean restriccion = entity.getInvestingStatements().getCurrency().equals("EUR");
-		errors.state(request, restriccion, "investingStatements", "administrator.investorRecords.must-be-euros");
+		if (!errors.hasErrors("investingStatements")) {
+			Boolean restriccion = entity.getInvestingStatements().getCurrency().equals("EUR");
+			errors.state(request, restriccion, "investingStatements", "administrator.investorRecords.must-be-euros");
+		}
 	}
 
 	@Override
