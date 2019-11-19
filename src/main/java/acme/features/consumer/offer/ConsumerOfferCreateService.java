@@ -67,9 +67,19 @@ public class ConsumerOfferCreateService implements AbstractCreateService<Consume
 		assert errors != null;
 
 		Boolean isAccepted;
+		String isEur;
+		Boolean ok;
 
 		isAccepted = request.getModel().getBoolean("confirm");
 		errors.state(request, isAccepted, "confirm", "consumer.offer.error.must-confirm");
+
+		isEur = request.getModel().getString("minMoney");
+		ok = isEur.contains("EUR") || isEur.contains("€");
+		errors.state(request, ok, "minMoney", "consumer.offer.error.incorrect-currency");
+		isEur = request.getModel().getString("maxMoney");
+		ok = isEur.contains("EUR") || isEur.contains("€");
+		errors.state(request, ok, "maxMoney", "consumer.offer.error.incorrect-currency");
+
 	}
 
 	@Override
