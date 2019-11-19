@@ -86,7 +86,8 @@
 
 			<acme:menu-suboption code="master.menu.administrator.dashboard.listing" action="/administrator/dashboard/listing" />
 			<acme:menu-suboption code="master.menu.administrator.chart" action="/administrator/chart/chart" />
-
+			<acme:menu-suboption code="master.menu.administrator.commercialBanner" action="/administrator/commercial-banner/list" />
+			<acme:menu-suboption code="master.menu.administrator.noncommercialBanner" action="/administrator/non-commercial-banner/list" />
 			
 
 
