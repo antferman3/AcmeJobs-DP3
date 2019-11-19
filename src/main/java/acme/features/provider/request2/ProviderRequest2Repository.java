@@ -18,4 +18,7 @@ public interface ProviderRequest2Repository extends AbstractRepository {
 	@Query("select a from Request2 a where a.deadline>CURRENT_TIMESTAMP")
 	Collection<Request2> findMany();
 
+	@Query("select a from Request2 a where a.ticker = ?1")
+	Request2 findOneByTicker(String ticker);
+
 }
