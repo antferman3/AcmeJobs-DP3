@@ -68,25 +68,38 @@ public class ConsumerOfferCreateService implements AbstractCreateService<Consume
 		assert entity != null;
 		assert errors != null;
 
-		Boolean isAccepted, okMin, okMax, comp;
-		String isEur;
-		Double maxi, mini;
+		Boolean isAccepted;
 
 		isAccepted = request.getModel().getBoolean("confirm");
 		errors.state(request, isAccepted, "confirm", "consumer.offer.error.must-confirm");
 
-		isEur = entity.getMinMoney().getCurrency();
-		okMin = isEur.equals("EUR") || isEur.equals("€");
-		errors.state(request, okMin, "minMoney", "consumer.offer.error.incorrect-currency");
+		if (!errors.hasErrors("minMoney")) {
+			String isEur;
+			Boolean okMin;
 
-		isEur = entity.getMaxMoney().getCurrency();
-		okMax = isEur.equals("EUR") || isEur.equals("€");
-		errors.state(request, okMax, "maxMoney", "consumer.offer.error.incorrect-currency");
+			isEur = entity.getMinMoney().getCurrency();
+			okMin = isEur.equals("EUR") || isEur.equals("€");
+			errors.state(request, okMin, "minMoney", "consumer.offer.error.incorrect-currency");
+		}
 
-		maxi = entity.getMaxMoney().getAmount();
-		mini = entity.getMinMoney().getAmount();
-		comp = maxi > mini;
-		errors.state(request, comp, "maxMoney", "consumer.offer.error.greater-than");
+		if (!errors.hasErrors("maxMoney")) {
+			String isEur;
+			Boolean okMax;
+
+			isEur = entity.getMaxMoney().getCurrency();
+			okMax = isEur.equals("EUR") || isEur.equals("€");
+			errors.state(request, okMax, "maxMoney", "consumer.offer.error.incorrect-currency");
+		}
+
+		if (!errors.hasErrors("maxMoney")) {
+			Double maxi, mini;
+			Boolean comp;
+
+			maxi = entity.getMaxMoney().getAmount();
+			mini = entity.getMinMoney().getAmount();
+			comp = maxi > mini;
+			errors.state(request, comp, "maxMoney", "consumer.offer.error.greater-than");
+		}
 
 		if (!errors.hasErrors("deadline")) {
 			Date deadline = entity.getDeadline();
@@ -95,6 +108,11 @@ public class ConsumerOfferCreateService implements AbstractCreateService<Consume
 			Date minDeadline = calendar.getTime();
 			Boolean restriccion = deadline.after(minDeadline);
 			errors.state(request, restriccion, "deadline", "consumer.offer.error.must-be-after");
+		}
+
+		if (!errors.hasErrors("ticker")) {
+			Offer ticker = this.repository.findOneByTicker(entity.getTicker());
+			errors.state(request, ticker == null, "ticker", "consumer.offer.error.unique-ticker");
 		}
 
 	}

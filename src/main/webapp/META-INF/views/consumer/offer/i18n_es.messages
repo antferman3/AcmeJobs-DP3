@@ -18,3 +18,4 @@ consumer.offer.error.must-confirm = Debe confirmar
 consumer.offer.error.incorrect-currency = Moneda incorrecta
 consumer.offer.error.greater-than = La moneda máxima debe ser mayor que la moneda mínima
 consumer.offer.error.must-be-after = Debe ser una fecha futura
+consumer.offer.error.unique-ticker = El id debe ser único

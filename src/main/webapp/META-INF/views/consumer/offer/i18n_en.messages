@@ -18,3 +18,4 @@ consumer.offer.error.must-confirm = Must confirm
 consumer.offer.error.incorrect-currency = Incorrect currency
 consumer.offer.error.greater-than = Max money should be greater than min money
 consumer.offer.error.must-be-after = Must be in the future
+consumer.offer.error.unique-ticker = This ticker already exist

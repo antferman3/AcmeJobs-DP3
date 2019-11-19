@@ -50,7 +50,6 @@ public class ProviderRequest2CreateService implements AbstractCreateService<Prov
 		assert errors != null;
 
 		request.bind(entity, errors, "moment");
-
 	}
 
 	@Override
@@ -67,15 +66,19 @@ public class ProviderRequest2CreateService implements AbstractCreateService<Prov
 		assert entity != null;
 		assert errors != null;
 
-		Boolean isAccepted, ok;
-		String isEur;
+		Boolean isAccepted;
 
 		isAccepted = request.getModel().getBoolean("confirm");
 		errors.state(request, isAccepted, "confirm", "provider.request2.error.must-confirm");
 
-		isEur = entity.getReward().getCurrency();
-		ok = isEur.equals("EUR") || isEur.equals("€");
-		errors.state(request, ok, "reward", "provider.request2.error.incorrect-currency");
+		if (!errors.hasErrors("reward")) {
+			String isEur;
+			Boolean ok;
+
+			isEur = entity.getReward().getCurrency();
+			ok = isEur.equals("EUR") || isEur.equals("€");
+			errors.state(request, ok, "reward", "provider.request2.error.incorrect-currency");
+		}
 
 		if (!errors.hasErrors("deadline")) {
 			Date deadline = entity.getDeadline();
@@ -84,6 +87,11 @@ public class ProviderRequest2CreateService implements AbstractCreateService<Prov
 			Date minDeadline = calendar.getTime();
 			Boolean restriccion = deadline.after(minDeadline);
 			errors.state(request, restriccion, "deadline", "provider.request2.error.must-be-after");
+		}
+
+		if (!errors.hasErrors("ticker")) {
+			Request2 ticker = this.repository.findOneByTicker(entity.getTicker());
+			errors.state(request, ticker == null, "ticker", "consumer.offer.error.unique-ticker");
 		}
 	}
 
