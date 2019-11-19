@@ -60,11 +60,11 @@ master.menu.anonymous.topRecords-list= Listar registro  de compañías top
 # master.menu.authenticated ###################################################
 master.menu.authenticated= Autenticado
 master.menu.authenticated.announcement-list = Listar anuncios
-master.menu.authenticated.request2-list= Lista de solicitudes
+master.menu.authenticated.request2-list= Listar solicitudes
 master.menu.authenticated.offer-list= Listar ofertas
 master.menu.authenticated.investorRecords-list= Listar inversiones
 master.menu.authenticated.challenge-list = Listar desafíos
-master.menu.authenticated.records-list= Listar de registro de compañías
+master.menu.authenticated.records-list= Listar registros de compañías
 
 # master.menu.administrator ###################################################
 
@@ -82,12 +82,12 @@ master.menu.administrator.announcement-create= Crear anuncios
 master.menu.administrator.announcement-update= Actualizar anuncios
 master.menu.administrator.announcement-delete= Eliminar anuncios
 
-master.menu.administrator.spam-list= Lista de Spam
+master.menu.administrator.spam-list= Lista de spam
 
-master.menu.administrator.records-list= Lista de Registros de Compañías
+master.menu.administrator.records-list= Listar registros de compañías
 
 
-master.menu.administrator.challenge = Lista de desafíos
+master.menu.administrator.challenge = Listar desafíos
 
 master.menu.administrator.commercialBanner= Banner comercial
 master.menu.administrator.noncommercialBanner=Banner no comercial
