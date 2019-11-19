@@ -84,12 +84,16 @@ master.menu.administrator.announcement-delete= Eliminar anuncios
 
 master.menu.administrator.spam-list= Lista de Spam
 
+master.menu.administrator.records-list= Lista de Registros de Compañías
+
+
 master.menu.administrator.challenge = Lista de desafíos
 
 master.menu.administrator.dashboard.listing= Dashboard
 master.menu.administrator.chart= Chart
 master.menu.administrator.commercialBanner= Commercial banner
 master.menu.administrator.noncommercialBanner=Non commercial banner
+
 
 # master.menu.provider ########################################################
 
@@ -131,7 +135,7 @@ master.company.text = \
 	Acme Jobs, Inc. es una compañía fictícia que proporciona un proyecto \
 	plantilla para los estudiantes de la asignatura Diseño y Pruebas, en el Grado \
 	en Ingeniería del Software de la Universidad de Sevilla.
-master.company.name = Acme Jobs
+master.company.name = Acme Jobs, Inc.
 master.company.address = Antonio Banderas, 14, Sevilla, Andalucía, España
 master.company.phone = +954 403 456
 master.company.email = contact@acmejobs.com

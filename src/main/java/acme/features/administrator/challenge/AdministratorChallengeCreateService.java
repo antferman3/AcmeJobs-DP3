@@ -11,6 +11,10 @@
 
 package acme.features.administrator.challenge;
 
+import java.util.Calendar;
+import java.util.Date;
+import java.util.GregorianCalendar;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -69,6 +73,15 @@ public class AdministratorChallengeCreateService implements AbstractCreateServic
 		assert request != null;
 		assert entity != null;
 		assert errors != null;
+
+		if (!errors.hasErrors("deadline")) {
+			Date deadline = entity.getDeadline();
+			Calendar calendar = new GregorianCalendar();
+			calendar.add(Calendar.DAY_OF_MONTH, 0);
+			Date minimumDeadline = calendar.getTime();
+			Boolean restriccion = deadline.after(minimumDeadline);
+			errors.state(request, restriccion, "deadline", "administrator.challenge.must-be-after");
+		}
 
 	}
 

@@ -1,46 +1,47 @@
 
-package acme.features.administrator.spam;
+package acme.features.administrator.records;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import acme.entities.spam.Spam;
+import acme.entities.records.Records;
 import acme.framework.components.Model;
 import acme.framework.components.Request;
 import acme.framework.entities.Administrator;
 import acme.framework.services.AbstractShowService;
 
 @Service
-public class AdministratorSpamShowService implements AbstractShowService<Administrator, Spam> {
+public class AdministratorRecordsShowService implements AbstractShowService<Administrator, Records> {
 
 	// Internal state ---------------------------------------------------------
 
 	@Autowired
-	private AdministratorSpamRepository repository;
+	private AdministratorRecordsRepository repository;
 
-	// AbstractCreateService<Administrator, Consumer> ---------------------------
+	// AbstractCreateService<Anonymous, Consumer> ---------------------------
 
 
 	@Override
-	public boolean authorise(final Request<Spam> request) {
+	public boolean authorise(final Request<Records> request) {
 		assert request != null;
 
 		return true;
 	}
 
 	@Override
-	public void unbind(final Request<Spam> request, final Spam entity, final Model model) {
+	public void unbind(final Request<Records> request, final Records entity, final Model model) {
 		assert request != null;
 		assert entity != null;
 		assert model != null;
 
-		request.unbind(entity, model, "spamWords", "umbral");
+		request.unbind(entity, model, "company", "companyIncorporated", "sector", "CEO", "activities", "web", "phone", "email", "stars", "incorporated");
+
 	}
 
 	@Override
-	public Spam findOne(final Request<Spam> request) {
+	public Records findOne(final Request<Records> request) {
 		assert request != null;
-		Spam result;
+		Records result;
 		int id;
 		id = request.getModel().getInteger("id");
 		result = this.repository.findOneById(id);

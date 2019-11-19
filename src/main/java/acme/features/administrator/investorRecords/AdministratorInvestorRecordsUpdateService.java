@@ -31,7 +31,7 @@ public class AdministratorInvestorRecordsUpdateService implements AbstractUpdate
 		assert entity != null;
 		assert errors != null;
 
-		request.bind(entity, errors, "ratings");
+		request.bind(entity, errors);
 
 	}
 
@@ -41,7 +41,7 @@ public class AdministratorInvestorRecordsUpdateService implements AbstractUpdate
 		assert entity != null;
 		assert model != null;
 
-		request.unbind(entity, model, "name", "sector", "investingStatements");
+		request.unbind(entity, model, "name", "sector", "investingStatements", "ratings");
 
 	}
 
@@ -62,7 +62,8 @@ public class AdministratorInvestorRecordsUpdateService implements AbstractUpdate
 		assert request != null;
 		assert entity != null;
 		assert errors != null;
-		assert entity.getInvestingStatements().getCurrency().equals("EUR");
+		Boolean restriccion = entity.getInvestingStatements().getCurrency().equals("EUR");
+		errors.state(request, restriccion, "investingStatements", "administrator.investorRecords.must-be-euros");
 
 	}
 

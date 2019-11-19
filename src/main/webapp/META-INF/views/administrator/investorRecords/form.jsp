@@ -9,7 +9,7 @@
 	<acme:form-textbox code="administrator.investorRecords.form.label.name" path="name"/> 
 	<acme:form-textbox code="administrator.investorRecords.form.label.sector" path="sector"/>
 	<acme:form-money code="administrator.investorRecords.form.label.investingStatements" path = "investingStatements"/>
-	<acme:form-double code="administrator.investorRecords.form.label.ratings" path="ratings"/>
+	<acme:form-textbox code="administrator.investorRecords.form.label.ratings" path="ratings" />
 	
 	<acme:form-submit test="${command=='show' }" code="administrator.investorRecords.form.button.update"
 		action="/administrator/investor-records/update"/>
