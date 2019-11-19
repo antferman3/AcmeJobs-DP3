@@ -231,10 +231,10 @@
 	
 	<bean id="commercialBanner01" class="acme.entities.banner.CommercialBanner">
 		<property name="picture"
-			value="https://www.hola.com/imagenes/estar-bien/20180831128704/ronroneo-gatos-causas/0-595-638/gato-ronroneo-1-t.jpg" />
-		<property name="slogan" value="Un gato very guapo" />
-		<property name="targetURL" value="https://www.mundogatos.com/foros" />
-		<property name="creditCard" value="5224746025394443" />
+			value="https://www.corbatasygemelos.es/2441-large_default/corbata-rayas-rojas-y-azules-ii.jpg" />
+		<property name="slogan" value="Una corbata" />
+		<property name="targetURL" value="https://www.corbatasygemelos.es" />
+		<property name="creditCard" value="5224646625364446" />
 	</bean>
 
 
@@ -245,6 +245,8 @@
 		<property name="targetURL" value="http://www.terrariofilia.com/foro-tortugas-acuaticas/" />
 		<property name="jingle" value="" />
 	</bean>
+	
+	
 
 </beans>
 

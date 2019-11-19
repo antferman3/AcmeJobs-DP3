@@ -86,6 +86,7 @@ master.menu.administrator.announcement-delete= Delete announcements
 master.menu.administrator.spam-list= List spam
 master.menu.administrator.dashboard.listing= Dashboard
 master.menu.administrator.chart= Chart
+master.menu.administrator.commercialBanner= Banner comercial
 
 # master.menu.provider ########################################################
 

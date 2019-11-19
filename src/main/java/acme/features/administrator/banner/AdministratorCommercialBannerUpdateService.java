@@ -4,7 +4,7 @@ package acme.features.administrator.banner;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import acme.entities.banner.banner;
+import acme.entities.banner.CommercialBanner;
 import acme.framework.components.Errors;
 import acme.framework.components.Model;
 import acme.framework.components.Request;
@@ -12,44 +12,44 @@ import acme.framework.entities.Administrator;
 import acme.framework.services.AbstractUpdateService;
 
 @Service
-public class AdministratorBannerUpdateService implements AbstractUpdateService<Administrator, banner> {
+public class AdministratorCommercialBannerUpdateService implements AbstractUpdateService<Administrator, CommercialBanner> {
 
 	@Autowired
-	AdministratorBannerRepository repository;
+	AdministratorCommercialBannerRepository repository;
 
 
 	@Override
-	public boolean authorise(final Request<banner> request) {
+	public boolean authorise(final Request<CommercialBanner> request) {
 		assert request != null;
 
 		return true;
 	}
 
 	@Override
-	public void bind(final Request<banner> request, final banner entity, final Errors errors) {
+	public void bind(final Request<CommercialBanner> request, final CommercialBanner entity, final Errors errors) {
 		assert request != null;
 		assert entity != null;
 		assert errors != null;
 
-		request.bind(entity, errors, "targetURL");
+		request.bind(entity, errors);
 
 	}
 
 	@Override
-	public void unbind(final Request<banner> request, final banner entity, final Model model) {
+	public void unbind(final Request<CommercialBanner> request, final CommercialBanner entity, final Model model) {
 		assert request != null;
 		assert entity != null;
 		assert model != null;
 
-		request.unbind(entity, model, "picture", "slogan", "targetURL");
+		request.unbind(entity, model, "picture", "slogan", "targetURL", "creditCard");
 
 	}
 
 	@Override
-	public banner findOne(final Request<banner> request) {
+	public CommercialBanner findOne(final Request<CommercialBanner> request) {
 		assert request != null;
 
-		banner result;
+		CommercialBanner result;
 		int id;
 
 		id = request.getModel().getInteger("id");
@@ -58,7 +58,7 @@ public class AdministratorBannerUpdateService implements AbstractUpdateService<A
 	}
 
 	@Override
-	public void validate(final Request<banner> request, final banner entity, final Errors errors) {
+	public void validate(final Request<CommercialBanner> request, final CommercialBanner entity, final Errors errors) {
 		assert request != null;
 		assert entity != null;
 		assert errors != null;
@@ -66,7 +66,7 @@ public class AdministratorBannerUpdateService implements AbstractUpdateService<A
 	}
 
 	@Override
-	public void update(final Request<banner> request, final banner entity) {
+	public void update(final Request<CommercialBanner> request, final CommercialBanner entity) {
 		assert request != null;
 		assert entity != null;
 
