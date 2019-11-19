@@ -17,3 +17,4 @@ provider.request2.list.label.reward= Reward
 
 provider.request2.error.must-confirm = Must confirm
 provider.request2.error.incorrect-currency = Incorrect currency
+provider.request2.error.must-be-after = Must be in the future

@@ -1,7 +1,9 @@
 
 package acme.features.consumer.offer;
 
+import java.util.Calendar;
 import java.util.Date;
+import java.util.GregorianCalendar;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -66,19 +68,34 @@ public class ConsumerOfferCreateService implements AbstractCreateService<Consume
 		assert entity != null;
 		assert errors != null;
 
-		Boolean isAccepted;
+		Boolean isAccepted, okMin, okMax, comp;
 		String isEur;
-		Boolean ok;
+		Double maxi, mini;
 
 		isAccepted = request.getModel().getBoolean("confirm");
 		errors.state(request, isAccepted, "confirm", "consumer.offer.error.must-confirm");
 
-		isEur = request.getModel().getString("minMoney");
-		ok = isEur.contains("EUR") || isEur.contains("€");
-		errors.state(request, ok, "minMoney", "consumer.offer.error.incorrect-currency");
-		isEur = request.getModel().getString("maxMoney");
-		ok = isEur.contains("EUR") || isEur.contains("€");
-		errors.state(request, ok, "maxMoney", "consumer.offer.error.incorrect-currency");
+		isEur = entity.getMinMoney().getCurrency();
+		okMin = isEur.equals("EUR") || isEur.equals("€");
+		errors.state(request, okMin, "minMoney", "consumer.offer.error.incorrect-currency");
+
+		isEur = entity.getMaxMoney().getCurrency();
+		okMax = isEur.equals("EUR") || isEur.equals("€");
+		errors.state(request, okMax, "maxMoney", "consumer.offer.error.incorrect-currency");
+
+		maxi = entity.getMaxMoney().getAmount();
+		mini = entity.getMinMoney().getAmount();
+		comp = maxi > mini;
+		errors.state(request, comp, "maxMoney", "consumer.offer.error.greater-than");
+
+		if (!errors.hasErrors("deadline")) {
+			Date deadline = entity.getDeadline();
+			Calendar calendar = new GregorianCalendar();
+			calendar.add(Calendar.DAY_OF_MONTH, 0);
+			Date minDeadline = calendar.getTime();
+			Boolean restriccion = deadline.after(minDeadline);
+			errors.state(request, restriccion, "deadline", "consumer.offer.error.must-be-after");
+		}
 
 	}
 

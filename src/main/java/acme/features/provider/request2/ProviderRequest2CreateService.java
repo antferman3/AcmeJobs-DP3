@@ -1,7 +1,9 @@
 
 package acme.features.provider.request2;
 
+import java.util.Calendar;
 import java.util.Date;
+import java.util.GregorianCalendar;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -64,21 +66,25 @@ public class ProviderRequest2CreateService implements AbstractCreateService<Prov
 		assert request != null;
 		assert entity != null;
 		assert errors != null;
-		//assert !(entity.getReward().getAmount() > 0.);
-		//assert this.esUnico(request, entity) != false;
-		//Date moment = new Date(System.currentTimeMillis() - 1);
-		//assert entity.getDeadline().after(moment);
 
-		Boolean isAccepted;
+		Boolean isAccepted, ok;
 		String isEur;
-		Boolean ok;
 
 		isAccepted = request.getModel().getBoolean("confirm");
 		errors.state(request, isAccepted, "confirm", "provider.request2.error.must-confirm");
 
-		isEur = request.getModel().getString("reward");
-		ok = isEur.contains("EUR") || isEur.contains("€");
+		isEur = entity.getReward().getCurrency();
+		ok = isEur.equals("EUR") || isEur.equals("€");
 		errors.state(request, ok, "reward", "provider.request2.error.incorrect-currency");
+
+		if (!errors.hasErrors("deadline")) {
+			Date deadline = entity.getDeadline();
+			Calendar calendar = new GregorianCalendar();
+			calendar.add(Calendar.DAY_OF_MONTH, 0);
+			Date minDeadline = calendar.getTime();
+			Boolean restriccion = deadline.after(minDeadline);
+			errors.state(request, restriccion, "deadline", "provider.request2.error.must-be-after");
+		}
 	}
 
 	@Override
