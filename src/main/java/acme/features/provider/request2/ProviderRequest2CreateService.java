@@ -91,7 +91,7 @@ public class ProviderRequest2CreateService implements AbstractCreateService<Prov
 
 		if (!errors.hasErrors("ticker")) {
 			Request2 ticker = this.repository.findOneByTicker(entity.getTicker());
-			errors.state(request, ticker == null, "ticker", "consumer.offer.error.unique-ticker");
+			errors.state(request, ticker == null, "ticker", "provider.request2.error.unique-ticker");
 		}
 	}
 
