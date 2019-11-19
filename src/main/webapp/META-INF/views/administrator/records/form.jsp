@@ -9,8 +9,8 @@
 
 
 	
-		<acme:form-textbox  code="administrator.records.form.label.company" path="company"/>
-		</c:if> 
+	<acme:form-textbox  code="administrator.records.form.label.company" path="company"/>
+	
 	
 	<acme:form-textbox code="administrator.records.form.label.sector" path="sector"/>
 	<acme:form-textbox code="administrator.records.form.label.CEO" path = "CEO"/>
