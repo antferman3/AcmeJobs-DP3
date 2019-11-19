@@ -9,7 +9,8 @@
 </jstl:if>
 
 <acme:form>
-
+	
+	<acme:form-textbox readonly="true" code="administrator.announcement.form.label.moment" path="moment"/>
 	<acme:form-textbox code="consumer.offer.form.label.title" path="title"/>  
 	<acme:form-moment code="consumer.offer.form.label.deadline" path ="deadline"/>
 	<acme:form-textarea code="consumer.offer.form.label.text" path="text"/>

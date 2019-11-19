@@ -9,6 +9,7 @@
 	<acme:form-textbox code="administrator.announcement.form.label.title" path="title"/> 
 	<acme:form-url code="administrator.announcement.form.label.moreInfo" path = "moreInfo"/>
 	<acme:form-textarea code="administrator.announcement.form.label.text" path="text"/>
+	<acme:form-textbox readonly="true" code="administrator.announcement.form.label.moment" path="moment"/>
 	<acme:form-submit test="${command=='show' }" code="administrator.announcement.form.button.update"
 		action="/administrator/announcement/update"/>
 	<acme:form-submit test="${command=='show' }" code="administrator.announcement.form.button.delete"
