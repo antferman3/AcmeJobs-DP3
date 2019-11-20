@@ -36,6 +36,7 @@ public class ProviderRequest2CreateService implements AbstractCreateService<Prov
 		assert model != null;
 
 		request.unbind(entity, model, "title", "ticker", "deadline", "text", "reward");
+
 		if (request.isMethod(HttpMethod.GET)) {
 			model.setAttribute("confirm", "false");
 		} else {
@@ -55,6 +56,7 @@ public class ProviderRequest2CreateService implements AbstractCreateService<Prov
 	@Override
 	public Request2 instantiate(final Request<Request2> request) {
 		assert request != null;
+
 		Request2 result;
 		result = new Request2();
 		return result;
@@ -66,18 +68,14 @@ public class ProviderRequest2CreateService implements AbstractCreateService<Prov
 		assert entity != null;
 		assert errors != null;
 
-		Boolean isAccepted;
-
-		isAccepted = request.getModel().getBoolean("confirm");
-		errors.state(request, isAccepted, "confirm", "provider.request2.error.must-confirm");
+		if (!errors.hasErrors("confirm")) {
+			Boolean isAccepted = request.getModel().getBoolean("confirm");
+			errors.state(request, isAccepted, "confirm", "provider.request2.error.must-confirm");
+		}
 
 		if (!errors.hasErrors("reward")) {
-			String isEur;
-			Boolean ok;
-
-			isEur = entity.getReward().getCurrency();
-			ok = isEur.equals("EUR") || isEur.equals("€");
-			errors.state(request, ok, "reward", "provider.request2.error.incorrect-currency");
+			Boolean ok = entity.getReward().getCurrency().equals("EUR");
+			errors.state(request, ok, "minMoney", "provider.request2.error.incorrect-currency");
 		}
 
 		if (!errors.hasErrors("deadline")) {

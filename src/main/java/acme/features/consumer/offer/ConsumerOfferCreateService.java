@@ -30,6 +30,16 @@ public class ConsumerOfferCreateService implements AbstractCreateService<Consume
 	}
 
 	@Override
+	public void bind(final Request<Offer> request, final Offer entity, final Errors errors) {
+		assert request != null;
+		assert entity != null;
+		assert errors != null;
+
+		request.bind(entity, errors, "moment");
+
+	}
+
+	@Override
 	public void unbind(final Request<Offer> request, final Offer entity, final Model model) {
 		assert request != null;
 		assert entity != null;
@@ -42,21 +52,13 @@ public class ConsumerOfferCreateService implements AbstractCreateService<Consume
 		} else {
 			request.transfer(model, "confirm");
 		}
-	}
-
-	@Override
-	public void bind(final Request<Offer> request, final Offer entity, final Errors errors) {
-		assert request != null;
-		assert entity != null;
-		assert errors != null;
-
-		request.bind(entity, errors, "moment");
 
 	}
 
 	@Override
 	public Offer instantiate(final Request<Offer> request) {
 		assert request != null;
+
 		Offer result;
 		result = new Offer();
 		return result;
@@ -68,37 +70,24 @@ public class ConsumerOfferCreateService implements AbstractCreateService<Consume
 		assert entity != null;
 		assert errors != null;
 
-		Boolean isAccepted;
-
-		isAccepted = request.getModel().getBoolean("confirm");
-		errors.state(request, isAccepted, "confirm", "consumer.offer.error.must-confirm");
+		if (!errors.hasErrors("confirm")) {
+			Boolean isAccepted = request.getModel().getBoolean("confirm");
+			errors.state(request, isAccepted, "confirm", "consumer.offer.error.must-confirm");
+		}
 
 		if (!errors.hasErrors("minMoney")) {
-			String isEur;
-			Boolean okMin;
-
-			isEur = entity.getMinMoney().getCurrency();
-			okMin = isEur.equals("EUR") || isEur.equals("€");
+			Boolean okMin = entity.getMinMoney().getCurrency().equals("EUR");
 			errors.state(request, okMin, "minMoney", "consumer.offer.error.incorrect-currency");
 		}
 
 		if (!errors.hasErrors("maxMoney")) {
-			String isEur;
-			Boolean okMax;
-
-			isEur = entity.getMaxMoney().getCurrency();
-			okMax = isEur.equals("EUR") || isEur.equals("€");
+			Boolean okMax = entity.getMaxMoney().getCurrency().equals("EUR");
 			errors.state(request, okMax, "maxMoney", "consumer.offer.error.incorrect-currency");
 		}
 
-		if (!errors.hasErrors("maxMoney")) {
-			Double maxi, mini;
-			Boolean comp;
-
-			maxi = entity.getMaxMoney().getAmount();
-			mini = entity.getMinMoney().getAmount();
-			comp = maxi > mini;
-			errors.state(request, comp, "maxMoney", "consumer.offer.error.greater-than");
+		if (!errors.hasErrors("maxMoney") && !errors.hasErrors("minMoney")) {
+			Boolean mayorQue = entity.getMaxMoney().getAmount() > entity.getMinMoney().getAmount();
+			errors.state(request, mayorQue, "maxMoney", "consumer.offer.error.greater-than");
 		}
 
 		if (!errors.hasErrors("deadline")) {
@@ -119,13 +108,13 @@ public class ConsumerOfferCreateService implements AbstractCreateService<Consume
 
 	@Override
 	public void create(final Request<Offer> request, final Offer entity) {
+
 		assert request != null;
 		assert entity != null;
-
 		Date moment;
-
 		moment = new Date(System.currentTimeMillis() - 1);
 		entity.setMoment(moment);
+
 		this.repository.save(entity);
 
 	}

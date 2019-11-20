@@ -66,10 +66,13 @@ public class AdministratorAnnouncementCreateService implements AbstractCreateSer
 
 	@Override
 	public void create(final Request<Announcement> request, final Announcement entity) {
-		Date moment;
 
+		assert request != null;
+		assert entity != null;
+		Date moment;
 		moment = new Date(System.currentTimeMillis() - 1);
 		entity.setMoment(moment);
+
 		this.repository.save(entity);
 
 	}

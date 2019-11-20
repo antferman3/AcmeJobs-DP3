@@ -445,7 +445,7 @@ Offer
 --
 + title: String {NotBlank}
 + moment: Date {Temporal(TIMESTAMP),Past}
-+ deadline: Date {Temporal(TIMESTAMP),Future}
++ deadline: Date {Temporal(TIMESTAMP),Future,NotNull}
 + text: String {NotBlank}
 + minMoney: Money {Valid,NotNull}
 + maxMoney: Money {Valid,NotNull}
@@ -466,7 +466,7 @@ Request2
 + title: String {NotBlank}
 + ticker: String {Unique,Pattern,NotBlank}
 + moment: Date {Temporal(TIMESTAMP),Past}
-+ deadline: Date {Temporal(TIMESTAMP),Future}
++ deadline: Date {Temporal(TIMESTAMP),Future,NotNull}
 + text: String {NotBlank}
 + reward: Money {Valid,NotNull}</panel_attributes>
     <additional_attributes/>
@@ -500,7 +500,7 @@ InvestorRecords
 Challenge
 --
 + title: String {NotBlank}
-+ deadline: Date {Temporal(TIMESTAMP),Future}
++ deadline: Date {Temporal(TIMESTAMP),Future,NotNull}
 + description: String {NotBlank}
 + goalGold: String {NotBlank}
 + goalSilver: String {NotBlank}

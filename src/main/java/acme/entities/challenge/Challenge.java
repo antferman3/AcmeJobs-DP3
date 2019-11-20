@@ -38,8 +38,10 @@ public class Challenge extends DomainEntity {
 
 	@NotBlank
 	private String				description;
+
 	@NotBlank
 	private String				goalGold;
+
 	@NotBlank
 	private String				goalSilver;
 

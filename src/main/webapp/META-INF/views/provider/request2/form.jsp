@@ -6,7 +6,7 @@
 
 
 <acme:form>
-	<acme:form-textbox readonly="true" code="administrator.announcement.form.label.moment" path="moment"/>
+	
 	<acme:form-textbox code="provider.request2.form.label.title" path="title"/>
 	<acme:form-textbox code="provider.request2.form.label.ticker" path="ticker" placeholder="Rabcd-12345"/> 
 	<acme:form-moment code="provider.request2.form.label.deadline" path ="deadline"/>

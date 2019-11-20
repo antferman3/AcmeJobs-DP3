@@ -43,6 +43,7 @@ public class Request2 extends DomainEntity {
 
 	@Temporal(TemporalType.TIMESTAMP)
 	@Future
+	@NotNull
 	private Date				deadline;
 
 	@NotBlank
