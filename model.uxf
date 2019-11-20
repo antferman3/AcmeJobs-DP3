@@ -562,9 +562,9 @@ Spam
 Banner
 --
 
-+ picture : String {NotBlank} {URL}
++ picture : String {NotBlank,URL}
 + slogan : String {NotBlank}
-+ targetURL : String {NotBlank} {URL}</panel_attributes>
++ targetURL : String {NotBlank,URL}</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
@@ -578,7 +578,7 @@ Banner
     <panel_attributes>&lt;&lt;Entity&gt;&gt;
 CommercialBanner
 --
-+ creditCard : String {NotBlank} {CreditCardNumber}
++ creditCard : String {NotBlank,CreditCardNumber}
 
 
 </panel_attributes>
@@ -593,7 +593,7 @@ CommercialBanner
       <h>120</h>
     </coordinates>
     <panel_attributes>&lt;&lt;Entity&gt;&gt;
-CommercialBanner
+NonCommercialBanner
 --
 + jingle : String {URL}
 
